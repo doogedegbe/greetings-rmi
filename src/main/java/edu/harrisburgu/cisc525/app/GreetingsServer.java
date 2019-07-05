@@ -23,5 +23,15 @@ public class GreetingsServer extends UnicastRemoteObject implements GreetingsInt
         LOGGER.info("Returning greetings with {}", greetings);
         return greetings;
     }
+
+	public Message hello(Message message) throws RemoteException, UnknownHostException {
+		// TODO Auto-generated method stub
+		Message greetings = new Message();
+        LOGGER.info("Receiving call with name {}", message);
+        LOGGER.info("Returning greetings with {}", greetings);
+        return greetings;
+		/*return null;*/
+	}
+  
     
 }
